@@ -59,10 +59,10 @@ public class DynamicArray<T> {
         size -= 1;
         return removed;
     }
-    
+
     @SuppressWarnings("unchecked")
     private void resize(int newCapacity) {
-        if (newCapacity < 1) {
+        if (newCapacity < size) {
             throw new IllegalArgumentException("Capacidad nueva no valida");
         }
 
